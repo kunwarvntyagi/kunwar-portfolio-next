@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-css-tags */
 import { Html, Head, Main, NextScript } from 'next/document'
 import React from 'react'
 
@@ -13,6 +14,7 @@ const MyDocument = () => {
           href="static/images/favicon.ico"
           type="image/x-icon"
         />
+        <link rel="stylesheet" href="/static/css/main.css" />
       </Head>
       <body>
         <Main />

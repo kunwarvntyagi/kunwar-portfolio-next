@@ -7,7 +7,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
-  trailingSlash: false,
+  trailingSlash: true,
   images: {
     disableStaticImages: true,
     loader: 'custom',
