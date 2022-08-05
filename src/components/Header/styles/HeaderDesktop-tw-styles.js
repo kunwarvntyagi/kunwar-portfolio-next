@@ -4,5 +4,10 @@ const styles = {
   headerLogo: 'w-50 h-50',
   menuWrapperDesktop: 'menu-link-wrapper float-right my-auto',
   menuItem: 'mx-15',
+  menuComponentDivClass:
+    'dt-open-menu-wrap shadow-lg rounded block items-center flex lg:justify-between lg:absolute z-50 m-auto',
+  childComponentDivClass: 'menu-links w-full rounded bg-white z-50',
+  menuListItem: 'text-black',
+  meunList: 'p-15',
 }
 export default styles

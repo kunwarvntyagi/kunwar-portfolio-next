@@ -1,11 +1,11 @@
 import HeaderDesktop from './HeaderDesktop'
-import styles from './styles/Header-tw-styles'
+import HeaderMobile from './HeaderMobile'
 
 const Header = ({ isMobile, headerData }) => {
   return (
     <>
       {isMobile ? (
-        <div className={styles.headerContainer}></div>
+        <HeaderMobile data={headerData} />
       ) : (
         <HeaderDesktop data={headerData} />
       )}

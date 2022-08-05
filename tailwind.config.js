@@ -1,6 +1,7 @@
 let colors = {
     blue: '#222',
     white: '#fff',
+    black: '#000',
     transparent: 'transparent'
 }
 
@@ -27,7 +28,10 @@ module.exports = {
                 BoldFont: ['']
             },
             fontSize: {
-                '14': '14px'
+                '14': '14px',
+                '20': '20px',
+                '25': '25px',
+                '30': '30px'
             },
             lineHeight: {
                 '20': '20px'
@@ -35,12 +39,17 @@ module.exports = {
             width: {
                 auto: 'auto',
                 full: '100%',
+                '20': '20px',
                 '50': '50px',
             },
             height: {
                 auto: 'auto',
                 full: '100%',
-                '50': '50px'
+                '20': '20px',
+                '50': '50px',
+                '60': '60px',
+                '70': '70px',
+                screen: '100vh'
             },
             maxWidth: {
                 md: '768px',
@@ -58,13 +67,19 @@ module.exports = {
             padding: {
                 '10': '10px',
                 '15': '15px',
-                '20': '20px'
+                '20': '20px',
+                '25': '25px',
+                '30': '30px'
             },
             margin: {
                 auto: 'auto',
+                '10vw': '10vw',
+                '10vh': '10vh',
                 '10': '10px',
                 '15': '15px',
-                '20': '20px'
+                '20': '20px',
+                '25': '25px',
+                '30': '30px'
             },
             borderWidth: {
 
@@ -82,10 +97,16 @@ module.exports = {
 
             },
             zIndex: {
+                '10': '10',
+                '20': '20',
+                '50': '50'
 
             },
             opacity: {
 
+            },
+            boxShadow: {
+                lg: "0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)"
             }
         }
     },

@@ -7,3 +7,30 @@
 .menu-link-wrapper {
     margin-left: auto;
 }
+
+.dt-open-menu-wrap {
+    overflow: hidden;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    width: 21%;
+}
+
+.dt-open-menu-wrap .menu-links {
+    width: 21vw;
+    margin-top: 1vw;
+}
+
+.logo-wrapper, .header-container {
+    height: 10vh;
+}
+
+.nav-mobile {
+    transform: translateX(0%);
+}
+
+.nav-mobile.slide-in {
+    animation: slide .3s forwards;
+}
+
+.nav-mobile.slide-out {
+    animation: slide-out .2s forwards;
+}
