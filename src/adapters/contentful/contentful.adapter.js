@@ -7,6 +7,13 @@ const getHeaderData = async () => {
   })
 }
 
+const getFooterData = async () => {
+  return await client.getEntries({
+    content_type: 'siteFooter',
+    include: 5,
+  })
+}
+
 const getHomePageSlug = async () => {
   return client.getEntries({
     content_type: 'homePage',
@@ -30,6 +37,7 @@ const getProjectDetailPageSlug = async () => {
 
 module.exports = {
   getHeaderData,
+  getFooterData,
   getHomePageSlug,
   getProjectDetailPageSlug,
   getProjectListingPageSlug,

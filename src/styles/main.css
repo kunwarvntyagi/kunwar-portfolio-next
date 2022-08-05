@@ -40,10 +40,27 @@
 }
 
 .container {
-    padding: 0 2rem;
     max-width: 100%;
     @apply mx-auto;
     @apply px-20;
+}
+
+.social-links {
+    float: right;
+}
+
+.social-icon-link img {
+    transition: 0.8s;
+}
+
+.social-icon-link img:hover {
+    transform: scale(1.08);
+}
+
+.hr-line {
+    color: white;
+    height: 10px;
+    opacity: 0.3;
 }
 
 @screen sm {

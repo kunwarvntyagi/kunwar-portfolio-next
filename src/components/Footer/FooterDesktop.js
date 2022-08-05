@@ -15,13 +15,13 @@ const FooterDesktop = (props) => {
           <div className={styles.footerDesktop.menuList}>
             <div className={styles.footerDesktop.socialMediaLinks}>
               <ul className="flex">
-                <SocialLinksDesktop />
+                <SocialLinksDesktop {...props} />
               </ul>
             </div>
           </div>
-          <hr className={styles.footerDesktop.horizontalLine} />
-          <div className={styles.footerDesktop.copyrightText}>{''}</div>
         </div>
+        <hr className={styles.footerDesktop.horizontalLine} />
+          <div className={styles.footerDesktop.copyrightText}>{'Handcrafted by me © kvnt'}</div>
       </div>
     </div>
   )

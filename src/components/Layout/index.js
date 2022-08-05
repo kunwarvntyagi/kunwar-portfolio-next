@@ -3,7 +3,7 @@ import useScreenSize from '../../helpers/hooks/useScreenSize'
 import Header from '../Header'
 import Footer from '../Footer'
 
-const Layout = ({ headerData, children }) => {
+const Layout = ({ headerData, children, footerData }) => {
   const [isMobile, setIsMobile] = useState(false)
   const screen = useScreenSize()
 
@@ -15,7 +15,7 @@ const Layout = ({ headerData, children }) => {
     <>
       <Header isMobile={isMobile} headerData={headerData} />
       <main id="mainContainer">{children}</main>
-      <Footer isMobile={isMobile} />
+      <Footer isMobile={isMobile} footerData={footerData} />
     </>
   )
 }
