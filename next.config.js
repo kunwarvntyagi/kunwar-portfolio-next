@@ -18,7 +18,8 @@ const nextConfig = {
     CF_SPACE_ID: process.env.CF_SPACE_ID,
     CF_ENVIRONMENT: process.env.CF_ENVIRONMENT,
     CF_DELIVERY_ACCESS_TOKEN: process.env.CF_DELIVERY_ACCESS_TOKEN,
-    CF_LOCALE: process.env.CF_LOCALE
+    CF_LOCALE: process.env.CF_LOCALE,
+    DOMAIN: process.env.DOMAIN
   },
   webpack(config) {
     if(process.env.NODE_ENV === 'development') {

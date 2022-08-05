@@ -508,6 +508,39 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.container {
+  width: 100%;
+}
+@media (min-width: 300px) {
+
+  .container {
+    max-width: 300px;
+  }
+}
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+
+  .container {
+    max-width: 1536px;
+  }
+}
 .static {
   position: static;
 }
@@ -547,6 +580,10 @@ video {
 .m-auto {
   margin: auto;
 }
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -559,17 +596,20 @@ video {
   margin-left: 15px;
   margin-right: 15px;
 }
+.mb-20 {
+  margin-bottom: 20px;
+}
 .mr-auto {
   margin-right: auto;
 }
 .ml-10 {
   margin-left: 10px;
 }
-.ml-10v {
+.ml-10vw {
   margin-left: 10vw;
 }
-.mt-60 {
-  margin-top: 15rem;
+.mt-10vh {
+  margin-top: 10vh;
 }
 .mt-40 {
   margin-top: 10rem;
@@ -586,8 +626,8 @@ video {
 .h-50 {
   height: 50px;
 }
-.h-70 {
-  height: 70px;
+.h-60 {
+  height: 60px;
 }
 .h-20 {
   height: 20px;
@@ -597,6 +637,9 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.w-1\/3 {
+  width: 33.33%;
 }
 .w-50 {
   width: 50px;
@@ -671,6 +714,15 @@ video {
   padding-top: 25px;
   padding-bottom: 25px;
 }
+.pb-30 {
+  padding-bottom: 30px;
+}
+.pt-60 {
+  padding-top: 15rem;
+}
+.pr-10 {
+  padding-right: 10px;
+}
 .text-left {
   text-align: left;
 }
@@ -729,10 +781,51 @@ video {
             animation: slide-out .2s forwards;
 }
 
+.footer-dt a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.container {
+    padding: 0 2rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (min-width: 300px) {
+    .container {
+        max-width: 528px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.footer-menu-wrap .footer-menu-list:last-child {
+  padding-right: 0px;
+}
+
 @media (min-width: 300px) {
 
   .sm\:hidden {
     display: none;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .md\:block {
+    display: block;
   }
 }
 

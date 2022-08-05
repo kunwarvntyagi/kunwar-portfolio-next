@@ -41,6 +41,7 @@ module.exports = {
                 full: '100%',
                 '20': '20px',
                 '50': '50px',
+                '1/3': '33.33%'
             },
             height: {
                 auto: 'auto',

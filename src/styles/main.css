@@ -34,3 +34,32 @@
 .nav-mobile.slide-out {
     animation: slide-out .2s forwards;
 }
+
+.footer-dt a:hover {
+    @apply text-white;
+}
+
+.container {
+    padding: 0 2rem;
+    max-width: 100%;
+    @apply mx-auto;
+    @apply px-20;
+}
+
+@screen sm {
+    .container {
+        max-width: 528px;
+        @apply px-0;
+    }
+}
+
+@screen md {
+    .container {
+        max-width: 100%;
+        @apply px-20;
+    }
+}
+
+.footer-menu-wrap .footer-menu-list:last-child {
+    @apply pr-0;
+}

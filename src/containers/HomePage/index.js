@@ -1,4 +1,4 @@
-const HomePage = () => {
+const HomePage = (props) => {
   return <p>{'Home Page'}</p>
 }
 
