@@ -28,10 +28,9 @@ const getProjectDetailPageSlug = async () => {
   })
 }
 
-
 module.exports = {
   getHeaderData,
   getHomePageSlug,
   getProjectDetailPageSlug,
-  getProjectListingPageSlug
+  getProjectListingPageSlug,
 }

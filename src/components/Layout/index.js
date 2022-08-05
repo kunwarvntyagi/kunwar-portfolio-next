@@ -13,9 +13,7 @@ const Layout = ({ headerData, children }) => {
   return (
     <>
       <Header isMobile={isMobile} headerData={headerData} />
-      <main id='mainContainer'>
-        {children}
-      </main>
+      <main id="mainContainer">{children}</main>
     </>
   )
 }

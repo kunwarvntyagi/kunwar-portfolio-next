@@ -1,11 +1,11 @@
-const { default: HomePage } = require("../containers/HomePage")
+const { default: HomePage } = require('../containers/HomePage')
 
 const EntryPage = () => {
-    return(
-        <>
-        <HomePage/>
-        </>
-    )
+  return (
+    <>
+      <HomePage />
+    </>
+  )
 }
 
 export default EntryPage

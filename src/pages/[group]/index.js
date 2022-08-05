@@ -1,24 +1,25 @@
 import React from 'react'
-import { getProjectDetailPageSlug } from '../../../../adapters/contentful/contentful.adapter'
-import ProjectDetailPage from '../../../../containers/ProjectDetailPage'
-import constants from '../../../../constants'
+import { getProjectListingPageSlug } from '../../adapters/contentful/contentful.adapter'
+import ProjectListingPage from '../../containers/ProjectListingPage'
+import constants from '../../constants'
 
 export const getStaticPaths = async () => {
   let pathArray = []
 
-  const projectDetailPageSlug = await getProjectDetailPageSlug()
+  const projectListingPageSlug = await getProjectListingPageSlug()
 
   pathArray = pathArray.concat([
-    ...projectDetailPageSlug.items
+    ...projectListingPageSlug.items
       .filter((item) => Boolean(item?.fields?.group))
       .map((item) => ({
         params: {
           group: item?.fields?.group,
           lang: constants.lang,
-          parent: item?.fields?.parent
         },
       })),
   ])
+
+  console.info(pathArray)
 
   return {
     paths: pathArray,
@@ -32,8 +33,8 @@ export const getStaticProps = async ({ params, preview }) => {
   }
 }
 
-const parentPages = (props) => {
-  return <ProjectDetailPage />
+const groupPages = (props) => {
+  return <ProjectListingPage />
 }
 
-export default parentPages
+export default groupPages
