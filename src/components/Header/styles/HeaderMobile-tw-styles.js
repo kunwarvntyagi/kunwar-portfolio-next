@@ -27,6 +27,6 @@ const styles = {
   subItemWrapper: 'ml-10vw',
   wrapper: 'bg-blue menu-container mt-10vh overflow-y-auto w-full',
   accordionWrapper: 'mt-40 bg-blue menu-main-accordion overflow-auto',
-  menuSlotButton: 'flex text-left w-full text-20 text-white px-30 py-25',
+  menuSlotButton: 'flex text-left w-full font-Regular text-20 text-white px-30 py-25',
 }
 export default styles
