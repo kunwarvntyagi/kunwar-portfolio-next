@@ -23,9 +23,9 @@ module.exports = {
                 '2xl': '1536px'
             },
             fontFamily: {
-                RegularFont: [''],
-                MediumFont: [''],
-                BoldFont: ['']
+                Regular: ['Gotham-Rounded-Book'],
+                Medium: ['Gotham-Rounded-Medium'],
+                Bold: ['Gotham-Rounded-Bold']
             },
             fontSize: {
                 '14': '14px',
@@ -76,6 +76,8 @@ module.exports = {
                 '20': '20px',
                 '25': '25px',
                 '30': '30px',
+                '40': '40px',
+                '50': '50px',
                 '60': '60px'
             },
             margin: {
@@ -89,6 +91,8 @@ module.exports = {
                 '20': '20px',
                 '25': '25px',
                 '30': '30px',
+                '40': '40px',
+                '50': '50px',
                 '60': '60px'
             },
             borderWidth: {

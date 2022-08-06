@@ -1,6 +1,6 @@
 const styles = {
-  navBar: 'navbar w-full bg-blue text-white',
-  navbarWrapper: 'flex flex-wrap w-full absolute top-0 left-0 h-60 z-20',
+  navBar: 'navbar w-full bg-blue text-white font-Regular',
+  navbarWrapper: 'flex flex-wrap w-full absolute top-0 left-0 h-10vh z-20',
   navbarWrapperOpen:
     'header-wrapper flex flex-wrap w-full fixed top-0 left-0 z-20',
   headerContainer:
@@ -22,7 +22,7 @@ const styles = {
   menuComponentDivClass:
     'dt-open-menu-wrap shadow-lg rounded block items-center flex lg:justify-between lg:absolute z-50 m-auto',
   childComponentDivClass: 'menu-links w-full rounded bg-white z-50',
-  menuListItem: 'text-black',
+  menuListItem: 'text-black font-Regular',
   meunList: 'p-15',
   subItemWrapper: 'ml-10vw',
   wrapper: 'bg-blue menu-container mt-10vh overflow-y-auto w-full',
