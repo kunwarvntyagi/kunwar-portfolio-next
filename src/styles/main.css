@@ -1,0 +1,82 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './font.css';
+@import './globals.css';
+
+.menu-link-wrapper {
+    margin-left: auto;
+}
+
+.dt-open-menu-wrap {
+    overflow: hidden;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    width: 21%;
+}
+
+.dt-open-menu-wrap .menu-links {
+    width: 21vw;
+    margin-top: 1vw;
+}
+
+.logo-wrapper, .header-container {
+    height: 10vh;
+}
+
+.nav-mobile {
+    transform: translateX(0%);
+}
+
+.nav-mobile.slide-in {
+    animation: slide .3s forwards;
+}
+
+.nav-mobile.slide-out {
+    animation: slide-out .2s forwards;
+}
+
+.footer-dt a:hover {
+    @apply text-white;
+}
+
+.container {
+    max-width: 100%;
+    @apply mx-auto;
+    @apply px-20;
+}
+
+.social-links {
+    float: right;
+}
+
+.social-icon-link img {
+    transition: 0.8s;
+}
+
+.social-icon-link img:hover {
+    transform: scale(1.08);
+}
+
+.hr-line {
+    color: white;
+    height: 10px;
+    opacity: 0.3;
+}
+
+@screen sm {
+    .container {
+        max-width: 528px;
+        @apply px-0;
+    }
+}
+
+@screen md {
+    .container {
+        max-width: 100%;
+        @apply px-20;
+    }
+}
+
+.footer-menu-wrap .footer-menu-list:last-child {
+    @apply pr-0;
+}
