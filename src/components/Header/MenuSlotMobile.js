@@ -14,11 +14,11 @@ const MenuSlotsMobile = (props) => {
             {(selectedIndex, setIndex) => { */}
         {menuSlots.map((menuSlot, index) => {
           const isSelected = true
-          {
-            console.info(menuSlot)
-          }
+          // {
+          //   console.info(menuSlot)
+          // }
           return menuSlot?.menuItem?.length > 0 ? (
-            <MenuSlotMobileItem menuSlot={menuSlot} />
+            <MenuSlotMobileItem key={index} menuSlot={menuSlot} />
           ) : (
             <a
               href={menuSlot?.link?.url}

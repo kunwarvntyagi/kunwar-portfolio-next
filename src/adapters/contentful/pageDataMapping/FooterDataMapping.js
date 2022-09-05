@@ -39,7 +39,7 @@ const getMappedFooterData = (sdkResponse) => {
           footerLogoDetalils.push({
             title: content[keyName]?.fields?.title,
             link: content[keyName]?.fields?.link?.fields?.url,
-            imamge: content[keyName]?.fields?.image?.fields?.file?.url,
+            image: content[keyName]?.fields?.image?.fields?.file?.url,
           })
           footerData.footerLogo =
             footerLogoDetalils.length > 0 ? footerLogoDetalils[0] : {}

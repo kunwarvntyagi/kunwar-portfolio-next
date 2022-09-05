@@ -1,8 +1,9 @@
 let colors = {
+    greenbg: '#00cb84',
     blue: '#222',
     white: '#fff',
     black: '#000',
-    transparent: 'transparent'
+    transparent: 'transparent',
 }
 
 module.exports = {
@@ -40,10 +41,15 @@ module.exports = {
             width: {
                 auto: 'auto',
                 full: '100%',
+                '10vw': '10vw',
+                '12vw': '12vw',
+                '15vw': '15vw',
                 '20': '20px',
                 '30': '30px',
                 '40': '40px',
                 '50': '50px',
+                '60': '60px',
+                '70': '70px',
                 '1/2': '50%',
                 '1/3': '33.33%',
                 '2/3': '66.66%'
@@ -51,7 +57,12 @@ module.exports = {
             height: {
                 auto: 'auto',
                 full: '100%',
+                '10vh': '10vh',
+                '12vh': '12vh',
+                '15vh': '15vh',
                 '20': '20px',
+                '30': '30px',
+                '40': '40px',
                 '50': '50px',
                 '60': '60px',
                 '70': '70px',

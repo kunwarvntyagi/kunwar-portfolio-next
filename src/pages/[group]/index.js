@@ -19,7 +19,7 @@ export const getStaticPaths = async () => {
       })),
   ])
 
-  console.info(pathArray)
+  // console.info(pathArray)
 
   return {
     paths: pathArray,

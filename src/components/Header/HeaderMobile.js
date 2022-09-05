@@ -22,7 +22,7 @@ const HeaderMobile = ({ data }) => {
           id="headerMenu"
           className={classNames(
             menuOpen ? styles.navbarWrapperOpen : styles.navbarWrapper,
-            'bg-blue',
+            'bg-greenbg',
           )}
         >
           <div
