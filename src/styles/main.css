@@ -7,7 +7,11 @@
 .menu-link-wrapper {
     margin-left: auto;
 }
-
+.bundle-button-sc-sample {
+    background-color: white !important;
+    border: 2px solid green !important;
+    color: black !important;
+}
 .dt-open-menu-wrap {
     overflow: hidden;
     transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
@@ -17,6 +21,10 @@
 .dt-open-menu-wrap .menu-links {
     width: 21vw;
     margin-top: 1vw;
+}
+
+.dt-open-menu-wrap .menu-links li:hover{
+    background-color: #00cb84;
 }
 
 .logo-wrapper, .header-container {
@@ -61,6 +69,84 @@
     color: white;
     height: 10px;
     opacity: 0.3;
+}
+
+.mouse-animation-outer-div {
+    width: 25px;
+    height: 40px;
+    border: 2px solid #333;
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+.mouse-animation-outer-div::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 1.3s infinite;
+}
+
+@keyframes wheel {
+    to {
+        opacity: 0;
+        top: 27px
+    }
+}
+
+@-webkit-keyframes wheel {
+    to {
+        opacity: 0;
+        top: 27px
+    }
+}
+
+.hover-underline-anim {
+    position: relative;
+}
+
+.hover-underline-anim:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    left: 0;
+    border-radius: 2px;
+    bottom: -5px;
+    background-color: #00cb84;
+    transition: transform 0.25s;
+}
+
+.hover-underline-anim:hover:after {
+    transform: scaleX(1);
+}
+
+.logo-img {
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.ctaButton {
+    padding: .5rem 3rem;
+    background: #00cb84;
+    color: #fff;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.15);
+    transition: transform .3s;
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
 }
 
 @screen sm {

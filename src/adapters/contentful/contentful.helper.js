@@ -9,24 +9,26 @@ const { getMappedFooterData } = require('./pageDataMapping/FooterDataMapping')
 const {
   getMappedHomePageData,
 } = require('./pageDataMapping/HomePageDataMapping')
+import { getMappedPagesData } from './pageDataMapping/AllPagesDataMapping'
+import { getPageData } from './contentful.adapter'
 
-const getHeaderMappedData = async () => {
+export const getHeaderMappedData = async () => {
   const entries = await getHeaderData()
   return getMappedHeaderData(entries)
 }
 
-const getHomePageMappedData = async () => {
+export const getHomePageMappedData = async () => {
   const entries = await getHomePageSlug()
   return getMappedHomePageData(entries)
 }
 
-const getFooterMappedData = async () => {
+export const getFooterMappedData = async () => {
   const entries = await getFooterData()
   return getMappedFooterData(entries)
 }
 
-module.exports = {
-  getHeaderMappedData,
-  getFooterMappedData,
-  getHomePageMappedData,
+export const getPageMappedData = async (slug) => {
+  // console.info('mapp slug', slug)
+  const entries = await getPageData(slug)
+  return getMappedPagesData(entries)
 }
