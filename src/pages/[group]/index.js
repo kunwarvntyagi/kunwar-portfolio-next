@@ -1,20 +1,24 @@
 import React from 'react'
-import { getProjectListingPageSlug } from '../../adapters/contentful/contentful.adapter'
+import { getPageSlug } from '../../adapters/contentful/contentful.adapter'
+import { getPageMappedData } from '../../adapters/contentful/contentful.helper'
 import ProjectListingPage from '../../containers/ProjectListingPage'
-import constants from '../../constants'
+import TextPage from '../../containers/TextPage'
+import constants, { LANG } from '../../constants'
 
 export const getStaticPaths = async () => {
   let pathArray = []
 
-  const projectListingPageSlug = await getProjectListingPageSlug()
+  const projectListingPageSlug = await getPageSlug()
 
   pathArray = pathArray.concat([
     ...projectListingPageSlug.items
-      .filter((item) => Boolean(item?.fields?.group))
+      .filter((item) => Boolean(item?.fields?.slug))
+      .filter((item) => item?.fields?.group === undefined)
+      .filter((item) => item?.fields?.parent === undefined)
       .map((item) => ({
         params: {
-          group: item?.fields?.group,
-          lang: constants.lang,
+          group: item?.fields?.slug,
+          lang: LANG,
         },
       })),
   ])
@@ -28,13 +32,43 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params, preview }) => {
+
+  let pageData = null
+
+  console.info(params, preview)
+
+  const { allPageData } = await getPageMappedData(params?.group)
+
+  if(allPageData.items.length) {
+    pageData = allPageData.items[0]
+  }
+
+  const pageType = pageData?.pageType || null
+
   return {
-    props: {},
+    props: {
+      pageData: pageData,
+      pageType: pageType
+    },
   }
 }
 
 const groupPages = (props) => {
-  return <ProjectListingPage />
+
+  const { pageData, pageType } = props
+
+  let textPageData = null
+  let projectListingData = null
+
+  switch(pageType) {
+    case 'Text Page':
+      textPageData = pageData
+      return <TextPage {...textPageData}/>
+    case 'Project Listing Page':
+      projectListingData = pageData
+      return <ProjectListingPage {...projectListingData}/>
+  }
+  return null
 }
 
 export default groupPages

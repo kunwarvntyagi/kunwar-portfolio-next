@@ -1,3 +1,5 @@
+import { fetchData } from './dataMapperHelper'
+
 const getMappedHomePageData = (sdkResponse) => {
   let homePageMappedData = { items: [] }
 
@@ -19,7 +21,13 @@ const getMappedHomePageData = (sdkResponse) => {
       }
       if (keyName === 'pageContent') {
         content[keyName].map((pageContent) => {
-          homeData.pageContentCollection.items.push(pageContent?.fields)
+          homeData.pageContentCollection.items.push(
+            fetchData(pageContent.sys.contentType.sys.id, pageContent)
+          //   {
+          //   __typename__ : pageContent.sys.contentType.sys.id,
+          //   ...pageContent?.fields
+          // }
+          )
         })
       }
       // if (keyName === 'menuSlots') {

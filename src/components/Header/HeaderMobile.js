@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import { useState } from 'react'
 import styles from './styles/HeaderMobile-tw-styles'
 import Media from '../Media'
-import constants from '../../constants'
+import constants, { HABURGER_IMAGE, HABURGER_IMAGE_OPEN } from '../../constants'
 import Navigation from './Navigation'
 
 const HeaderMobile = ({ data }) => {
@@ -48,8 +48,8 @@ const HeaderMobile = ({ data }) => {
                       className={styles.hamburgerIcon}
                       src={
                         menuOpen
-                          ? constants.images.hamburgerOpen
-                          : constants.images.hamburger
+                          ? HABURGER_IMAGE_OPEN
+                          : HABURGER_IMAGE
                       }
                       alt={'hamburgerIcon'}
                     />

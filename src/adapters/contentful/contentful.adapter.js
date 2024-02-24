@@ -21,17 +21,18 @@ const getHomePageSlug = async () => {
   })
 }
 
-const getProjectListingPageSlug = async () => {
-  return client.getEntries({
-    content_type: 'projectListingPage',
+const getPageSlug = async () => {
+  return await client.getEntries({
+    content_type: 'page',
     include: 5,
   })
 }
 
-const getProjectDetailPageSlug = async () => {
-  return client.getEntries({
-    content_type: 'projectDetailPage',
+const getPageData = async (slug) => {
+  return await client.getEntries({
+    content_type: 'page',
     include: 5,
+    'fields.slug': slug
   })
 }
 
@@ -39,6 +40,6 @@ module.exports = {
   getHeaderData,
   getFooterData,
   getHomePageSlug,
-  getProjectDetailPageSlug,
-  getProjectListingPageSlug,
+  getPageSlug,
+  getPageData
 }

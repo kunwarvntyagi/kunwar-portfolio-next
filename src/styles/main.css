@@ -7,7 +7,11 @@
 .menu-link-wrapper {
     margin-left: auto;
 }
-
+.bundle-button-sc-sample {
+    background-color: white !important;
+    border: 2px solid green !important;
+    color: black !important;
+}
 .dt-open-menu-wrap {
     overflow: hidden;
     transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
@@ -17,6 +21,10 @@
 .dt-open-menu-wrap .menu-links {
     width: 21vw;
     margin-top: 1vw;
+}
+
+.dt-open-menu-wrap .menu-links li:hover{
+    background-color: #00cb84;
 }
 
 .logo-wrapper, .header-container {

@@ -1,0 +1,51 @@
+{
+    "compilerOptions": {
+        "baseUrl" : ".",
+        "paths": {
+            "@components" : [
+                "src/components"
+            ],
+            "@components/*": [
+                "src/components/*"
+            ],
+            "@adapters/*": [
+                "src/adapters/*"
+            ],
+            "@helpers/*": [
+                "src/helpers/*"
+            ], 
+            "@generators": [
+                "config/generators"
+            ], 
+            "@generators/*": [
+                "config/generators/*"
+            ]
+        },
+        "target": "es5",
+        "lib" : [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs" : true,
+        "skipLibCheck": true,
+        "strict": false,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "incremental": true,
+        "esModuleInterop": true,
+        "module": "CommonJS",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "moduleResolution": "node"
+    },
+    "include": [
+        "next-env.d.ts",
+        "**/*. ts",
+        "**/*.tsx"
+    ],
+    "exclude": [
+        "node _modules"
+    ]
+}
