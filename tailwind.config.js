@@ -3,8 +3,11 @@ let colors = {
     blue: '#222',
     white: '#fff',
     black: '#000',
+    heroColor: '#f5f5f5cc',
     transparent: 'transparent',
+    
 }
+const safeList = ['bg-hero', 'border-black', 'border-4']
 
 module.exports = {
     content: ['./src/**/*.{js,ts,jsx,tsx}'],
@@ -16,6 +19,9 @@ module.exports = {
             backgroundColor: colors,
             textColor: colors,
             borderColor: colors,
+            backgroundImage: {
+                hero: 'linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(/static/images/a.jpg)'
+            },
             screens: {
                 sm: '300px',
                 md: '768px',
@@ -57,6 +63,7 @@ module.exports = {
             height: {
                 auto: 'auto',
                 full: '100%',
+                hero: 'calc(100vh - 90px)',
                 '10vh': '10vh',
                 '12vh': '12vh',
                 '15vh': '15vh',
@@ -71,6 +78,10 @@ module.exports = {
             maxWidth: {
                 md: '768px',
                 lg: '984px',
+                '1/2': '50%',
+                '1/3': '33.33%',
+                '2/3': '66.66%',
+                '3/4' : '75%'
             },
             maxHeight: {
 
@@ -113,10 +124,10 @@ module.exports = {
 
             },
             inset: {
-
+                '1/2': '50%'
             },
             spacing: {
-
+                '1/2': '50%'
             },
             gap: {
 
@@ -144,4 +155,5 @@ module.exports = {
         padding: ['responsive']
     },
     plugins: [],
+    safelist: safeList
 }

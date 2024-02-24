@@ -29,7 +29,8 @@
     "serve": "dotenv -- bash -c 'npx serve out -l \"${PORT:-3000}\"'",
     "serve; ci": "npx pm2 start npm -- run serve && sleep 5",
     "analyze": "BUNDLE_ANALYZER=true next build",
-    "analyze-win": "set BUNDLE_ANALYZER-true && next build"
+    "analyze-win": "set BUNDLE_ANALYZER-true && next build",
+    "build-css": "postcss ./src/styles/main.css -o ./staticcss/main.css"
   },
   "dependencies": {
     "@microsoft/applicationinsights-web": "^3.1.0",
@@ -50,6 +51,7 @@
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.1",
     "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.0",
     "sharp": "^0.33.2"
   },
   "devDependencies": {
@@ -102,13 +104,23 @@
   },
   "robots": {
     "prod": {
-      "userAgent": ["*"],
-      "allow": ["/"]
+      "userAgent": [
+        "*"
+      ],
+      "allow": [
+        "/"
+      ]
     },
     "dev": {
-      "userAgent": ["*"],
-      "disallow": ["*"],
-      "noindex": ["*"]
+      "userAgent": [
+        "*"
+      ],
+      "disallow": [
+        "*"
+      ],
+      "noindex": [
+        "*"
+      ]
     }
   }
 }

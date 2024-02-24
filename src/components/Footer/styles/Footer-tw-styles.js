@@ -28,6 +28,6 @@ const styles = {
       'text-center text-white font-Medium text-16 ml-auto lg:w-auto',
   },
   logo: 'mx-auto w-60 h-60 items-center pt-40 flex',
-  logoImage: 'mx-auto',
+  logoImage: 'mx-auto logo-img',
 }
 export default styles

@@ -36,6 +36,10 @@ const getPageData = async (slug) => {
   })
 }
 
+// cosnt getProjectDetailPageSlug = async (slug) => {
+
+// }
+
 module.exports = {
   getHeaderData,
   getFooterData,

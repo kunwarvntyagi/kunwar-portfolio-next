@@ -12,7 +12,20 @@ export type PageItemsProps = {
     id?: string | number
     image?: CtImageProps
     content?: CtContent
-    textAlign?: string
+    bannerType?: string
+    bannerBgColor?: string
+    bgImage?: CtImageProps
+    callToAction?: CtActionButton
+}
+
+type CtActionButton = {
+    link?: {
+        title?: string
+        url?: string
+    }
+    linkText?: string
+    name?: string
+    target?: string
 }
 
 export type CtImageProps = {
@@ -20,12 +33,28 @@ export type CtImageProps = {
     altText: string
     spImage: ImageObject
     dtImage: ImageObject
+    additionalStyle?: string
 }
 
 export type ImageObject = {
     title: string
     description: string
-    file: object
+    file: ImageFile
+}
+
+type ImageFile = {
+    url?: string
+    contentType?: string
+    fileName?: string
+    details?: ImageDetails
+}
+
+type ImageDetails = {
+    size?: number
+    image?: {
+        height?: number
+        width?: number
+    }
 }
 
 export type CtContent = {

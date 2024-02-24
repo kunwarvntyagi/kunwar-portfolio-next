@@ -1,4 +1,4 @@
 const styles = {
-  headerContainer: '',
+    headerContainer: '',
 }
 export default styles
