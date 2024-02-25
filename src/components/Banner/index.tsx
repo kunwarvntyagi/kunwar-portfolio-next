@@ -7,7 +7,14 @@ import MouseAnimation from '@components/Common/MouseAnimation'
 import Picture from '@components/Common/Picture'
 
 const Banner = (props: PageItemsProps) => {
-    const { content, bannerType, bannerBgColor, image, callToAction } = props
+    const {
+        content,
+        bannerType,
+        bannerBgColor,
+        image,
+        callToAction,
+        showMouseAnim,
+    } = props
 
     return (
         <div
@@ -56,7 +63,7 @@ const Banner = (props: PageItemsProps) => {
                     />
                 )}
             </div>
-            <MouseAnimation />
+            {showMouseAnim === true && <MouseAnimation />}
         </div>
     )
 }

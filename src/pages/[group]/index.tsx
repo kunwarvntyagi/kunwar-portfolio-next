@@ -4,7 +4,7 @@ import { getPageMappedData } from '../../adapters/contentful/contentful.helper'
 import ProjectListingPage from '../../containers/ProjectListingPage'
 import TextPage from '../../containers/TextPage'
 import { LANG } from '../../constants'
-import { GetStaticPaths } from 'next'
+import { GetStaticPaths, GetStaticProps } from 'next'
 
 export const getStaticPaths: GetStaticPaths = async () => {
     let pathArray = []
@@ -32,10 +32,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
     }
 }
 
-export const getStaticProps = async ({ params, preview }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
     let pageData = null
-
-    console.info(params, preview)
 
     const { allPageData } = await getPageMappedData(params?.group)
 
