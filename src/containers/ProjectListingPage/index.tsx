@@ -1,6 +1,6 @@
-import { PageDataProps } from 'src/types/page'
+// import { PageDataProps } from 'src/types/page'
 
-const ProjectListingPage = (props?: PageDataProps) => {
+const ProjectListingPage = () => {
     return (
         <>
             <p>{'Project Listing Page'}</p>
