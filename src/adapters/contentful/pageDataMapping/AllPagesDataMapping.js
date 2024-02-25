@@ -1,3 +1,5 @@
+import { fetchData } from './dataMapperHelper'
+
 export const getMappedPagesData = (sdkResponse) => {
   let allPageData = { items: [] }
 
@@ -6,6 +8,7 @@ export const getMappedPagesData = (sdkResponse) => {
       sys: { id: '' },
       pageMetaData: {},
       pageContentCollection: { items: [] },
+      breadcrumbs: []
     }
     let content = item?.fields
     pageData.sys.id = item.sys.id
@@ -17,9 +20,16 @@ export const getMappedPagesData = (sdkResponse) => {
       if (keyName === 'pageMetadata') {
         pageData.pageMetaData = content[keyName]?.fields || null
       }
+      if(keyName === 'breadcrumbs')  {
+        content[keyName].map((breadcrumb) => {
+          pageData.breadcrumbs.push(breadcrumb.fields)
+        })
+      }
       if (keyName === 'pageContent') {
         content[keyName].map((pageContent) => {
-          pageData.pageContentCollection.items.push(pageContent?.fields)
+          pageData.pageContentCollection.items.push(
+            fetchData(pageContent.sys.contentType.sys.id, pageContent)
+          )
         })
       }
     })

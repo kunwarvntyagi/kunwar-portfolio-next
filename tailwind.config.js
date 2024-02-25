@@ -7,7 +7,7 @@ let colors = {
     transparent: 'transparent',
     
 }
-const safeList = ['bg-hero', 'border-black', 'border-4']
+const safeList = ['bg-hero', 'border-black', 'border-4', 'bg-white']
 
 module.exports = {
     content: ['./src/**/*.{js,ts,jsx,tsx}'],
@@ -118,7 +118,7 @@ module.exports = {
                 '60': '60px'
             },
             borderWidth: {
-
+                '1': '1px'
             },
             borderRadius: {
 

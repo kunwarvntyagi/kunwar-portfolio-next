@@ -23,10 +23,23 @@ export const fetchData = (__typename__, fields) => {
                     additionalStyle: content?.bgImage?.fields?.additionalStyle || null,
                 },
                 id: fields.sys.id,
+                showMouseAnim: content.showMouseAnim | false,
                 callToAction: {
                     ...content?.callToAction?.fields || null,
                     link: content?.callToAction?.fields?.link?.fields || null,
                 }
+            }
+        case 'keywordsContainer' :
+            let keylists = []
+            content.keywords.map((keylist) => keylists.push(keylist.fields))
+            return {
+                __typename__: __typename__,
+                name: content.name,
+                heading: {
+                    ...content.heading.fields
+                },
+                keywords: keylists,
+                id: fields.sys.id,
             }
     }
 }

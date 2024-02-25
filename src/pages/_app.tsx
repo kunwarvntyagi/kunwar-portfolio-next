@@ -6,7 +6,7 @@ import {
 import Layout from '../components/Layout'
 import '../styles/main.css'
 import { AppProps } from 'next/app'
-import { telemetry } from '../adapters/telemetry'
+// import { telemetry } from '../adapters/telemetry'
 import Head from 'next/head'
 import { SITE_DESCRIPTION, SITE_TITLE } from 'src/constants'
 
@@ -15,7 +15,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
     useEffect(() => {
         document.title = SITE_TITLE
-        telemetry.initialize()
+        // telemetry.initialize()
     }, [])
 
     return (

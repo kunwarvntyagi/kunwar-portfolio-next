@@ -1,9 +1,13 @@
+import { BreadcrumbProps } from '@components/Common/Breadcrumb/Breadcrumb.types'
+import { KeywordsProps } from '@components/Common/Keywords/Keywords.types'
+
 export type PageDataProps = {
     pageContentCollection: PageContentCollectionProps
+    breadcrumbs?: BreadcrumbProps[]
 }
 
 export type PageContentCollectionProps = {
-    items: PageItemsProps[]
+    items?: PageItemsProps[] | KeywordsProps[]
 }
 
 export type PageItemsProps = {
@@ -16,6 +20,7 @@ export type PageItemsProps = {
     bannerBgColor?: string
     bgImage?: CtImageProps
     callToAction?: CtActionButton
+    showMouseAnim?: boolean
 }
 
 type CtActionButton = {

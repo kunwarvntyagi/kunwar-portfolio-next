@@ -53,7 +53,7 @@ const MenuSlotAccordionItem = (props: MenuSlotAccordionItemProps) => {
                 )}
             >
                 {' '}
-                {menuSlot?.menuItem?.map((item, index) => {
+                {menuSlot?.menuItem?.map((item, index: number) => {
                     return (
                         <a
                             key={index}

@@ -1,6 +1,5 @@
 import styles from './styles/HeaderMobile-tw-styles'
 import { memo } from 'react'
-// import Accordion from '../Accordion/Accordion'
 import MenuSlotAccordionItem from './MenuSlotAccordionItem'
 import Accordion from '@components/Accordion/Accordion'
 import { MINUS_IMAGE, PLUS_IMAGE } from 'src/constants'
@@ -12,16 +11,9 @@ const MenuSlotsMobile = (props) => {
     return (
         <div id={wrapperRef} className={styles.wrapper}>
             <div id="MobileNavigation">
-                {/* <Accordion parentElement={wrapperRef} className={styles.accordionWrapper}>
-            {(selectedIndex, setIndex) => { */}
-                {menuSlots.map((menuSlot, index) => {
-                    // const isSelected = true
-                    // {
-                    //   console.info(menuSlot)
-                    // }
+                {menuSlots.map((menuSlot, index: number) => {
                     return menuSlot?.menuItem?.length > 0 ? (
-                        // <MenuSlotMobileItem key={index} menuSlot={menuSlot} />
-                        <Accordion putInViewPort={true}>
+                        <Accordion putInViewPort={true} key={index}>
                             {(selectedIndex, setIndex) => {
                                 const isSelected = selectedIndex === index
                                 return (
@@ -47,8 +39,6 @@ const MenuSlotsMobile = (props) => {
                         </a>
                     )
                 })}
-                {/* }}
-        </Accordion> */}
             </div>
         </div>
     )
