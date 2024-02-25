@@ -6,7 +6,7 @@ const getMappedHomePageData = (sdkResponse) => {
   sdkResponse?.items.forEach((item) => {
     let homeData = {
       sys: { id: '' },
-      pageMetaData: {},
+      pageMetadata: {},
       pageContentCollection: { items: [] },
     }
     let content = item?.fields
@@ -17,7 +17,7 @@ const getMappedHomePageData = (sdkResponse) => {
         homeData[keyName] = content[keyName]
       }
       if (keyName === 'pageMetadata') {
-        homeData.pageMetaData = content[keyName]?.fields || null
+        homeData.pageMetadata = content[keyName]?.fields || null
       }
       if (keyName === 'pageContent') {
         content[keyName].map((pageContent) => {

@@ -2,7 +2,7 @@ import React from 'react'
 import { PageDataProps, PageItemsProps } from '../../types/page'
 import Banner from '@components/Banner'
 
-const HomePage = (homePageData: PageDataProps) => {
+const HomePage = (pageData: PageDataProps) => {
     const loadComponent = (componentType: string, pageItem: PageItemsProps) => {
         switch (componentType) {
             case 'banner':
@@ -14,7 +14,7 @@ const HomePage = (homePageData: PageDataProps) => {
 
     return (
         <>
-            {homePageData.pageContentCollection.items.map(
+            {pageData.pageContentCollection.items.map(
                 (pageItem: PageItemsProps) => {
                     return loadComponent(pageItem.__typename__, pageItem)
                 },

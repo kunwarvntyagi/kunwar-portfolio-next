@@ -18,10 +18,6 @@ const MyDocument = () => {
                     href="/static/images/favicon.ico"
                     type="image/x-icon"
                 />
-                <script
-                    type="text/javascript"
-                    src="https://eu-ss.click2cart.com/assets/js/smartcart.js"
-                />
                 <link rel="stylesheet" href="/static/css/main.css" />
             </Head>
             <body>

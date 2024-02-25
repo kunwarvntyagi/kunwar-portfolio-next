@@ -6,7 +6,7 @@ export const getMappedPagesData = (sdkResponse) => {
   sdkResponse?.items.forEach((item) => {
     let pageData = {
       sys: { id: '' },
-      pageMetaData: {},
+      pageMetadata: {},
       pageContentCollection: { items: [] },
       breadcrumbs: []
     }
@@ -18,7 +18,7 @@ export const getMappedPagesData = (sdkResponse) => {
         pageData[keyName] = content[keyName]
       }
       if (keyName === 'pageMetadata') {
-        pageData.pageMetaData = content[keyName]?.fields || null
+        pageData.pageMetadata = content[keyName]?.fields || null
       }
       if(keyName === 'breadcrumbs')  {
         content[keyName].map((breadcrumb) => {
