@@ -23,7 +23,7 @@ export const fetchData = (__typename__, fields) => {
                     additionalStyle: content?.bgImage?.fields?.additionalStyle || null,
                 },
                 id: fields.sys.id,
-                showMouseAnim: content.showMouseAnim | false,
+                showMouseAnim: content.showMouseAnim || false,
                 callToAction: {
                     ...content?.callToAction?.fields || null,
                     link: content?.callToAction?.fields?.link?.fields || null,
