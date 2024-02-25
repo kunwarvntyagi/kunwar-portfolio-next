@@ -32,6 +32,9 @@
     "analyze-win": "set BUNDLE_ANALYZER-true && next build",
     "build-css": "postcss ./src/styles/main.css -o ./staticcss/main.css"
   },
+  "engines": {
+    "node": ">=18.0.2"
+  },
   "dependencies": {
     "@microsoft/applicationinsights-web": "^3.1.0",
     "classnames": "^2.5.1",
