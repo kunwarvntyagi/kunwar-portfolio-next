@@ -1,9 +1,7 @@
-import { BreadcrumbProps } from '@components/Common/Breadcrumb/Breadcrumb.types'
 import { KeywordsProps } from '@components/Common/Keywords/Keywords.types'
 
 export type PageDataProps = {
     pageContentCollection: PageContentCollectionProps
-    breadcrumbs?: BreadcrumbProps[]
 }
 
 export type PageContentCollectionProps = {
@@ -69,5 +67,5 @@ export type CtContent = {
 }
 
 export type HomePageDataProps = {
-    homePageData: PageDataProps
+    pageData: PageDataProps
 }

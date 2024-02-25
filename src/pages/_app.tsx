@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import {
     getHeaderMappedData,
     getFooterMappedData,
@@ -8,15 +8,9 @@ import '../styles/main.css'
 import { AppProps } from 'next/app'
 // import { telemetry } from '../adapters/telemetry'
 import Head from 'next/head'
-import { SITE_DESCRIPTION, SITE_TITLE } from 'src/constants'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
     const { headerData, footerData } = pageProps
-
-    useEffect(() => {
-        document.title = SITE_TITLE
-        // telemetry.initialize()
-    }, [])
 
     return (
         <>
@@ -25,13 +19,13 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
                     name="viewport"
                     content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no"
                 />
-                <meta name="description" content={SITE_DESCRIPTION} />
-                <link rel="canonical" href={`https://${process.env.DOMAIN}`} />
-                <meta property="og:title" content={SITE_TITLE} />
-                <meta property="og:description" content={SITE_DESCRIPTION} />
             </Head>
             <React.StrictMode>
-                <Layout headerData={headerData} footerData={footerData}>
+                <Layout
+                    headerData={headerData}
+                    footerData={footerData}
+                    pageInfo={pageProps.pageData}
+                >
                     <Component {...pageProps} />
                 </Layout>
             </React.StrictMode>

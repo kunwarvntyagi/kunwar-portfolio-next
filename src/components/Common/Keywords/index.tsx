@@ -29,17 +29,15 @@ const Keywords = (props: KeywordsProps) => {
                     (keyword: { title: string; url: string }, idx: number) => {
                         return keyword.url ? (
                             <a
-                                className={keywordsStyles.keyword}
+                                className={keywordsStyles.keywordLink}
                                 href={keyword.url}
                                 key={idx}
+                                target="__blank"
                             >
                                 {keyword.title}
                             </a>
                         ) : (
-                            <div
-                                className={keywordsStyles.keywordLink}
-                                key={idx}
-                            >
+                            <div className={keywordsStyles.keyword} key={idx}>
                                 {keyword.title}
                             </div>
                         )

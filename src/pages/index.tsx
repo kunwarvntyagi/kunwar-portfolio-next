@@ -4,20 +4,20 @@ import React from 'react'
 import { HomePageDataProps } from 'src/types/page'
 
 const EntryPage = (props: HomePageDataProps) => {
-    const { homePageData } = props
+    const { pageData } = props
 
     return (
         <>
-            <HomePage {...homePageData} />
+            <HomePage {...pageData} />
         </>
     )
 }
 
 export async function getStaticProps() {
-    const homePageData = await getHomePageMappedData()
+    const pageData = await getHomePageMappedData()
     return {
         props: {
-            homePageData: homePageData?.homePageMappedData?.items[0],
+            pageData: pageData?.homePageMappedData?.items[0],
         },
     }
 }
