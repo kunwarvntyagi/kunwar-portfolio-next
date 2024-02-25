@@ -5,7 +5,7 @@ const MyDocument = () => {
     return (
         <Html lang={process.env.SITE_LANG}>
             <Head>
-                <link rel="icon" href="static/images/favicon.ico" />
+                <link rel="icon" href="/static/images/favicon.ico" />
                 <link
                     rel="icon preload"
                     as="image"
