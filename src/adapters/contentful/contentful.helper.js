@@ -1,14 +1,7 @@
-const {
-  getHeaderData,
-  getFooterData,
-  getHomePageSlug,
-} = require('./contentful.adapter')
-
-const { getMappedHeaderData } = require('./pageDataMapping/HeaderDataMapping')
-const { getMappedFooterData } = require('./pageDataMapping/FooterDataMapping')
-const {
-  getMappedHomePageData,
-} = require('./pageDataMapping/HomePageDataMapping')
+import { getHeaderData, getFooterData, getHomePageSlug } from './contentful.adapter'
+import { getMappedFooterData } from './pageDataMapping/FooterDataMapping'
+import { getMappedHeaderData } from './pageDataMapping/HeaderDataMapping'
+import { getMappedHomePageData } from './pageDataMapping/HomePageDataMapping'
 import { getMappedPagesData } from './pageDataMapping/AllPagesDataMapping'
 import { getPageData } from './contentful.adapter'
 
