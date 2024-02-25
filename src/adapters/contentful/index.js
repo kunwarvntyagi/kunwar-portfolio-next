@@ -1,5 +1,7 @@
-require('dotenv').config()
+import dotenv from 'dotenv'
 import { createClient } from 'contentful'
+
+dotenv.config()
 
 export const contentfulClient = createClient({
   space: process.env.CF_SPACE_ID,

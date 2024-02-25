@@ -17,6 +17,7 @@ const nextConfig = {
   poweredByHeader: false,
   swcMinify: true,
   compress: true,
+  output: 'export',
   trailingSlash: true,
   // images: {
   //   disableStaticImages: true,
@@ -38,7 +39,12 @@ const nextConfig = {
     CF_ENVIRONMENT: process.env.CF_ENVIRONMENT,
     CF_DELIVERY_ACCESS_TOKEN: process.env.CF_DELIVERY_ACCESS_TOKEN,
     CF_LOCALE: process.env.CF_LOCALE,
-    DOMAIN: process.env.DOMAIN
+    DOMAIN: process.env.DOMAIN,
+    SITE_LANG: process.env.SITE_LANG,
+    PORT: process.env.PORT,
+    ENV: process.env.ENV,
+    BUNDLE_ANALYZER: process.env.BUNDLE_ANALYZER,
+    AZURE_INSTRUMENTATION_KEY: process.env.AZURE_INSTRUMENTATION_KEY
   },
   webpack(config) {
     if(process.env.NODE_ENV === 'development') {
