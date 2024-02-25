@@ -16,11 +16,13 @@ const Layout = ({ headerData, children, footerData, pageInfo }) => {
     return (
         <>
             <Header isMobile={isMobile} headerData={headerData} />
-            {pageInfo.breadcrumbs && pageInfo.breadcrumbs.length > 0 && (
-                <Breadcrumb breadcrumbs={pageInfo.breadcrumbs} />
-            )}
-            {pageInfo.pageMetadata && (
-                <PageMetaData {...pageInfo.pageMetadata} />
+            {pageInfo &&
+                pageInfo?.breadcrumbs &&
+                pageInfo?.breadcrumbs?.length > 0 && (
+                    <Breadcrumb breadcrumbs={pageInfo?.breadcrumbs} />
+                )}
+            {pageInfo?.pageMetadata && (
+                <PageMetaData {...pageInfo?.pageMetadata} />
             )}
             <main id="mainContainer">{children}</main>
             <Footer isMobile={isMobile} footerData={footerData} />
