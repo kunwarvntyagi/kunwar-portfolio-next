@@ -1,12 +1,12 @@
-import Head from 'next/head'
+import Banner from '@components/Banner'
+import PageMetaData from '@components/Common/PageMetadata'
+import { ERROR_PAGE_BANNER_DATA, ERROR_PAGE_METADATA } from 'src/constants'
 
 const Error404Page = () => {
     return (
         <>
-            <Head>
-                <title>{''}</title>
-            </Head>
-            <>Sorry, the page is not found</>
+            <PageMetaData {...ERROR_PAGE_METADATA} />
+            <Banner {...ERROR_PAGE_BANNER_DATA} />
         </>
     )
 }

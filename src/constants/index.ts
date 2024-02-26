@@ -1,4 +1,5 @@
-import { ImageObject } from 'src/types/page'
+import { PageMetadataProps } from '@components/Common/PageMetadata/PageMetadata.types'
+import { ImageObject, PageItemsProps } from 'src/types/page'
 
 export const LANG: string = 'en-us'
 
@@ -42,4 +43,36 @@ export const MINUS_IMAGE: ImageObject = {
             },
         },
     },
+}
+
+export const ERROR_PAGE_BANNER_DATA: PageItemsProps = {
+    bannerType: 'Error',
+    bannerBgColor: 'bg-heroColor',
+    __typename__: 'banner',
+    name: '404 Banner',
+    image: {
+        dtImage: null,
+        name: null,
+        altText: null,
+        spImage: null,
+    },
+    content: {
+        heading: 'Oops!',
+        headingType: 'h1',
+        subHeading: `The page you are looking for doesn't exist. Try starting from the home page`,
+    },
+    callToAction: {
+        linkText: 'HOMEPAGE',
+        link: {
+            url: '/',
+        },
+        target: '_self',
+    },
+}
+
+export const ERROR_PAGE_METADATA: PageMetadataProps = {
+    title: '404 Error | Kunwar Vashistha Narayan Tyagi',
+    description: '404 Error Page',
+    keywords: 'error,404',
+    type: 'Error Page',
 }
