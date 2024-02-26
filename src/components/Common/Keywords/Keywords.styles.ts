@@ -1,6 +1,6 @@
 export const keywordsStyles = {
     container:
-        'w-full h-auto py-[5vw] flex flex-col bg-bottom items-center justify-center',
+        'w-full h-auto py-[4vw] flex flex-col bg-bottom items-center justify-center',
     heading:
         'font-Bold text-3xl lg:text-4xl text-center mb-40 uppercase max-w-3/4',
     subHeading: 'font-Regular text-lg lg:text-xl text-center max-w-3/4',

@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from './styles/Footer-tw-styles'
 import { FooterMenu, FooterProps } from './types/Footer.types'
+import classNames from 'classnames'
 
-const MenusDesktop = ({ footerData }: FooterProps) => {
+const Menus = ({ footerData, isMobile }: FooterProps) => {
     const { footerMenuCollection } = footerData
     return (
         <React.Fragment>
-            <div className="w-2/3">
+            <div className={classNames(isMobile ? '' : 'w-2/3')}>
                 <ul>
                     {footerMenuCollection?.map(
                         (footerMenu: FooterMenu, index: number) => {
@@ -33,4 +34,4 @@ const MenusDesktop = ({ footerData }: FooterProps) => {
     )
 }
 
-export default MenusDesktop
+export default Menus

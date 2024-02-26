@@ -21,7 +21,7 @@ export type PageItemsProps = {
     showMouseAnim?: boolean
 }
 
-type CtActionButton = {
+export type CtActionButton = {
     link?: {
         title?: string
         url?: string

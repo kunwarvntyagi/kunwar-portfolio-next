@@ -1,6 +1,6 @@
 const styles = {
     footerDesktop: {
-        wrapper: 'sm:hidden md:block bg-greenbg w-full footer-dt',
+        wrapper: 'sm:hidden md:block lg:block bg-greenbg w-full footer-dt',
         container: 'container my-0 mx-auto pb-30 pt-30',
         bottomWrapper: 'footer-menu-wrap flex mb-20',
         menuList: 'footer-menu-list w-1/2 pr-10 mb-13',
@@ -14,7 +14,7 @@ const styles = {
             'text-center text-white font-Medium text-16 ml-auto lg:w-auto',
     },
     footerMobile: {
-        wrapper: 'md:hidden bg-greenbg text-white font-Regular',
+        wrapper: 'lg:hidden bg-greenbg text-white font-Regular',
         container: 'my-0 mx-auto px-30 pt-65 container text-white pb-30',
         bottomWrapper: 'block pt-40 pl-20 mb-40',
         menuList: 'block',

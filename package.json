@@ -54,6 +54,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.1",
+    "react-slick": "^0.30.2",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.0",
     "sharp": "^0.33.2"
@@ -72,6 +73,7 @@
     "@types/jest-environment-puppeteer": "^5.0.6",
     "@types/node": "^20.11.20",
     "@types/react": "^18.2.58",
+    "@types/react-slick": "^0.23.13",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "autoprefixer": "^10.4.17",

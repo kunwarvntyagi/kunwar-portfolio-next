@@ -3,8 +3,9 @@ import styles from './styles/Footer-tw-styles'
 import { FooterProps, FooterSocial } from './types/Footer.types'
 import Image from 'next/image'
 
-const SocialLinksDesktop = ({ footerData }: FooterProps) => {
+const SocialLinks = ({ footerData, isMobile }: FooterProps) => {
     const { footerSocialCollection } = footerData
+    const socialStyle = isMobile ? styles.footerMobile : styles.footerDesktop
     return (
         <React.Fragment>
             {footerSocialCollection?.map(
@@ -14,12 +15,12 @@ const SocialLinksDesktop = ({ footerData }: FooterProps) => {
                             <a
                                 href={socialMenu?.link}
                                 target={socialMenu?.target}
-                                className={styles.footerDesktop.socialIconLink}
+                                className={socialStyle.socialIconLink}
                             >
                                 <Image
                                     src={socialMenu?.image?.url}
                                     alt={socialMenu?.title}
-                                    className={styles.footerDesktop.socialIcon}
+                                    className={socialStyle.socialIcon}
                                     width={socialMenu?.image?.width}
                                     height={socialMenu?.image?.height}
                                 />
@@ -32,4 +33,4 @@ const SocialLinksDesktop = ({ footerData }: FooterProps) => {
     )
 }
 
-export default SocialLinksDesktop
+export default SocialLinks

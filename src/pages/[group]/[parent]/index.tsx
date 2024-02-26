@@ -1,30 +1,26 @@
 import React from 'react'
-import { getPageSlug } from '../../adapters/contentful/contentful.adapter'
-import { getPageMappedData } from '../../adapters/contentful/contentful.helper'
-// import ProjectListingPage from '../../containers/ProjectListingPage'
-import TextPage from '../../containers/TextPage'
-import { LANG } from '../../constants'
+import { getPageSlug } from '../../../adapters/contentful/contentful.adapter'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import { LANG } from '../../../constants'
+import { getParentPageMappedData } from '@adapters/contentful/contentful.helper'
+import TextPage from 'src/containers/TextPage'
 
 export const getStaticPaths: GetStaticPaths = async () => {
     let pathArray = []
 
-    const projectListingPageSlug = await getPageSlug()
+    const projectDetailPageSlug = await getPageSlug()
 
     pathArray = pathArray.concat([
-        ...projectListingPageSlug.items
-            .filter((item) => Boolean(item?.fields?.slug))
-            .filter((item) => item?.fields?.group === undefined)
-            .filter((item) => item?.fields?.parent === undefined)
+        ...projectDetailPageSlug.items
+            .filter((item) => Boolean(item?.fields?.group))
             .map((item) => ({
                 params: {
-                    group: item?.fields?.slug,
+                    group: item?.fields?.group,
                     lang: LANG,
+                    parent: item?.fields?.parent,
                 },
             })),
     ])
-
-    // console.info(pathArray)
 
     return {
         paths: pathArray,
@@ -35,7 +31,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     let pageData = null
 
-    const { allPageData } = await getPageMappedData(params?.group)
+    const { allPageData } = await getParentPageMappedData(
+        params?.group,
+        params?.parent,
+    )
 
     if (allPageData.items.length) {
         pageData = allPageData.items[0]
@@ -51,7 +50,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
 }
 
-const groupPages = (props) => {
+const parentPages = (props) => {
     const { pageData, pageType } = props
 
     let textPageData = null
@@ -61,11 +60,11 @@ const groupPages = (props) => {
         case 'Text Page':
             textPageData = pageData
             return <TextPage {...textPageData} />
-        case 'Project Listing Page':
+        case 'Project Details Page':
             projectListingData = pageData
             return <TextPage {...projectListingData} />
     }
     return null
 }
 
-export default groupPages
+export default parentPages
