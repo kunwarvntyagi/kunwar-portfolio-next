@@ -13,7 +13,7 @@
     "postexport": "",
     "preview": "npm --production=false install && next build",
     "prettier": "prettier \"src/**/*.{ts,tsx}\" --write",
-    "prepare": "husky install",
+    "prepare": "",
     "lint": "npm run lint:ts && npm run lint:styles",
     "lint:ts": "eslint \"./src/pages/**/*.{ts,tsx}\" \"./src/components/**/*.{ts,tsx}\" \"./src/adapters/**/*.{ts,tsx}\" --fix",
     "lint:styles": "stylelint \"./src/components/**/*.css\" --allow-empty-input",
