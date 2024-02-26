@@ -2,6 +2,18 @@ name: Azure Static Web Apps CI/CD
 
 env:
   CF_DELIVERY_ACCESS_TOKEN: Dx6Vw-37AO8fMnAQnwagT9AmvNHiz1X8EZFGsTcEXEs
+  CF_SPACE_ID: sv934u8dkza5
+  CF_ENVIRONMENT: master
+  CF_LOCALE: en-US
+  DOMAIN: https://orange-desert-04b39360f.4.azurestaticapps.net
+  SITE_LANG: en
+  ENV: production
+  NODE_ENV: production
+  BUNDLE_ANALYZER: false
+  PORT: 3000
+  AZURE_INSTRUMENTATION_KEY: abc
+  AZURE_SUBSCRIPTION_ID: 253ff9c9-69af-432a-817b-62446d2c4f38
+  AZURE_TENANT_ID: 26252d16-3def-437a-860d-d33830e4963b
 
 on:
   push:
