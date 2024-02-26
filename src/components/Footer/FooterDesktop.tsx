@@ -2,23 +2,25 @@ import classNames from 'classnames'
 import MenusDesktop from './MenusDesktop'
 import SocialLinksDesktop from './SocialLinksDesktop'
 import styles from './styles/Footer-tw-styles'
+import { FooterProps } from './types/Footer.types'
+import Image from 'next/image'
 
-const FooterDesktop = (props) => {
-    // console.info(props)
+const FooterDesktop = (props: FooterProps) => {
+    const { footerData } = props
+
     return (
         <div
             className={classNames(styles.footerDesktop.wrapper)}
             role="contentinfo"
         >
             <div id="logoContainer">
-                <a
-                    href={props?.footerData?.footerLogo?.link}
-                    className={styles.logo}
-                >
-                    <img
-                        src={props?.footerData?.footerLogo?.image}
-                        alt={props?.footerdata?.footerLogo?.title}
+                <a href={footerData?.footerLogo?.link} className={styles.logo}>
+                    <Image
+                        src={footerData?.footerLogo?.image?.url}
+                        alt={footerData.footerLogo?.title}
                         className={styles.logoImage}
+                        width={footerData?.footerLogo?.image?.width}
+                        height={footerData?.footerLogo?.image?.height}
                     />
                 </a>
             </div>

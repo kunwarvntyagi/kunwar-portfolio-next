@@ -2,22 +2,25 @@ import classNames from 'classnames'
 import MenusMobile from './MenusMobile'
 import SocialLinksMobile from './SocialLinksMobile'
 import styles from './styles/Footer-tw-styles'
+import { FooterProps } from './types/Footer.types'
+import Image from 'next/image'
 
-const FooterMobile = (props) => {
+const FooterMobile = (props: FooterProps) => {
+    const { footerData } = props
+
     return (
         <div
             className={classNames(styles.footerMobile.wrapper)}
             role="contentinfo"
         >
             <div id="logoContainer">
-                <a
-                    href={props?.footerData?.footerLogo?.link}
-                    className={styles.logo}
-                >
-                    <img
-                        src={props?.footerData?.footerLogo?.image}
-                        alt={props?.footerdata?.footerLogo?.title}
+                <a href={footerData?.footerLogo?.link} className={styles.logo}>
+                    <Image
+                        src={footerData?.footerLogo?.image?.url}
+                        alt={footerData.footerLogo?.title}
                         className={styles.logoImage}
+                        width={footerData?.footerLogo?.image?.width}
+                        height={footerData?.footerLogo?.image?.height}
                     />
                 </a>
             </div>

@@ -18,7 +18,7 @@ const MyDocument = () => {
                     href="/static/images/favicon.ico"
                     type="image/x-icon"
                 />
-                <link rel="stylesheet" href="/static/css/main.css" />
+                {/* <link rel="stylesheet" href="/static/css/main.css" /> */}
             </Head>
             <body>
                 <Main />

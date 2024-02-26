@@ -4,6 +4,7 @@ import styles from './styles/HeaderMobile-tw-styles'
 import Media from '../Media'
 import { HABURGER_IMAGE, HABURGER_IMAGE_OPEN } from '../../constants'
 import Navigation from './Navigation'
+import Image from 'next/image'
 
 const HeaderMobile = ({ data }) => {
     const { headerLogo, headerMenuCollection } = data
@@ -56,7 +57,7 @@ const HeaderMobile = ({ data }) => {
                                                 : styles.hamburger,
                                         )}
                                     >
-                                        <img
+                                        <Image
                                             className={styles.hamburgerIcon}
                                             src={
                                                 menuOpen
@@ -64,6 +65,8 @@ const HeaderMobile = ({ data }) => {
                                                     : HABURGER_IMAGE
                                             }
                                             alt={'hamburgerIcon'}
+                                            width={20}
+                                            height={20}
                                         />
                                     </button>
                                 )}

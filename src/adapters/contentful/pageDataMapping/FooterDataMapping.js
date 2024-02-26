@@ -28,7 +28,11 @@ const getMappedFooterData = (sdkResponse) => {
             title: data?.fields?.title,
             link: data?.fields?.link?.fields?.url,
             target: data?.fields?.target,
-            image: data?.fields?.image?.fields?.file?.url,
+            image: {
+              url: data?.fields?.image?.fields?.file?.url,
+              width: data?.fields?.image?.fields?.file?.details?.image?.width,
+              height: data?.fields?.image?.fields?.file?.details?.image?.height,
+            } 
           })
         })
         footerData.footerSocialCollection = socialCollection
@@ -39,7 +43,11 @@ const getMappedFooterData = (sdkResponse) => {
           footerLogoDetalils.push({
             title: content[keyName]?.fields?.title,
             link: content[keyName]?.fields?.link?.fields?.url,
-            image: content[keyName]?.fields?.image?.fields?.file?.url,
+            image: {
+              url: content[keyName]?.fields?.image?.fields?.file?.url,
+              width: content[keyName]?.fields?.image?.fields?.file?.details?.image?.width,
+              height: content[keyName]?.fields?.image?.fields?.file?.details?.image?.height,
+            } 
           })
           footerData.footerLogo =
             footerLogoDetalils.length > 0 ? footerLogoDetalils[0] : {}
