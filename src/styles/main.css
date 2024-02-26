@@ -160,6 +160,13 @@
     margin-right: 5px;
 }
 
+@layer base {
+    .Banner strong {
+        font-family: 'Gotham-Rounded-Bold';
+        font-weight: 100;
+    }
+}
+
 @screen sm {
     .container {
         max-width: 528px;
