@@ -15,12 +15,14 @@
 .dt-open-menu-wrap {
     overflow: hidden;
     transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
-    width: 21%;
+    width: 250px;
+    top: 25px;
+    background: #33333305;
 }
 
 .dt-open-menu-wrap .menu-links {
     width: 21vw;
-    margin-top: 1vw;
+    margin-top: 0.5vw;
 }
 
 .dt-open-menu-wrap .menu-links li:hover{
