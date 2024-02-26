@@ -1,5 +1,8 @@
 name: Azure Static Web Apps CI/CD
 
+env:
+  CF_DELIVERY_ACCESS_TOKEN: ${{vars.CF_DELIVERY_ACCESS_TOKEN}}
+
 on:
   push:
     branches:
