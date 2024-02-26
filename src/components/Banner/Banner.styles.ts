@@ -8,6 +8,14 @@ export const bannerStyles = {
             'BannerHeading font-Bold text-3xl lg:text-4xl text-center mb-40 uppercase max-w-3/4',
         subHeading: 'font-Regular text-lg lg:text-xl text-center max-w-3/4',
     },
+    Error: {
+        container: 'CenterBanner w-full h-auto py-[4vw] flex bg-bottom',
+        contentContainer: 'w-full flex flex-col justify-center items-center',
+        imageContainer: '',
+        heading:
+            'font-Bold text-4xl lg:text-6xl text-center mb-40 uppercase max-w-3/4',
+        subHeading: 'font-Regular text-lg lg:text-xl text-center max-w-3/4',
+    },
     Hero: {
         container: 'HeroBanner w-full h-hero flex bg-bottom',
         contentContainer: 'w-full flex flex-col justify-center items-center',
