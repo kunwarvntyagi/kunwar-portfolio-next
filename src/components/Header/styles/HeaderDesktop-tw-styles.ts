@@ -10,7 +10,7 @@ const styles = {
     menuComponentDivClass:
         'dt-open-menu-wrap shadow-lg rounded block items-center flex lg:justify-between lg:absolute z-50 m-auto',
     childComponentDivClass: 'menu-links w-full rounded bg-white z-50',
-    menuListItem: 'text-black font-Regular',
+    menuListItem: 'text-black font-Regular hover:text-white',
     meunList: 'p-15',
 }
 export default styles

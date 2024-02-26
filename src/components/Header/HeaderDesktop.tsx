@@ -45,7 +45,9 @@ const HeaderDesktop = ({ data }) => {
                                         <li key={index}>
                                             {!mainMenuItem?.link?.url ? (
                                                 <div
-                                                    className={styles.menuItem}
+                                                    className={
+                                                        styles.menuItemHover
+                                                    }
                                                     // href={
                                                     //     mainMenuItem?.link?.url
                                                     // }
@@ -91,27 +93,27 @@ const HeaderDesktop = ({ data }) => {
                                                                                 ind,
                                                                             ) => {
                                                                                 return (
-                                                                                    <li
+                                                                                    <a
                                                                                         key={
                                                                                             ind
                                                                                         }
                                                                                         className={
-                                                                                            styles.meunList
+                                                                                            styles.menuListItem
+                                                                                        }
+                                                                                        href={
+                                                                                            menuListItem
+                                                                                                ?.fields
+                                                                                                ?.link
+                                                                                                ?.fields
+                                                                                                ?.url
                                                                                         }
                                                                                     >
-                                                                                        <a
+                                                                                        <li
                                                                                             key={
                                                                                                 ind
                                                                                             }
                                                                                             className={
-                                                                                                styles.menuListItem
-                                                                                            }
-                                                                                            href={
-                                                                                                menuListItem
-                                                                                                    ?.fields
-                                                                                                    ?.link
-                                                                                                    ?.fields
-                                                                                                    ?.url
+                                                                                                styles.meunList
                                                                                             }
                                                                                         >
                                                                                             {
@@ -119,8 +121,8 @@ const HeaderDesktop = ({ data }) => {
                                                                                                     ?.fields
                                                                                                     ?.title
                                                                                             }
-                                                                                        </a>
-                                                                                    </li>
+                                                                                        </li>
+                                                                                    </a>
                                                                                 )
                                                                             },
                                                                         )}
