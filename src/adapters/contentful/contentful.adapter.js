@@ -36,6 +36,15 @@ export const getPageData = async (slug) => {
   })
 }
 
+export const getParentPageData = async (group, parent) => {
+  return await client.getEntries({
+    content_type: 'page',
+    include: 5,
+    'fields.group': group,
+    'fields.parent': parent
+  })
+}
+
 // cosnt getProjectDetailPageSlug = async (slug) => {
 
 // }

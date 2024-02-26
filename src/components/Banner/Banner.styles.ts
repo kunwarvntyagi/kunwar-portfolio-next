@@ -1,7 +1,7 @@
 export const bannerStyles = {
     button: 'ctaButton font-Medium text-md lg:text-xl mt-20',
     Center: {
-        container: 'CenterBanner w-full h-auto py-[5vw] flex bg-bottom',
+        container: 'CenterBanner w-full h-auto py-[4vw] flex bg-bottom',
         contentContainer: 'w-full flex flex-col justify-center items-center',
         imageContainer: '',
         heading:
