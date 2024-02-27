@@ -80,6 +80,13 @@ export const fetchData = (__typename__, fields) => {
                 text: content.text,
                 additionalStyle: content.additionalStyle | ''
             }
+        case 'videoPlayer':
+                return {
+                    __typename__: __typename__,
+                    id: fields.sys.id,
+                    url: content.url,
+                    additionalStyle: content.additionalStyle | ''
+                }
 
     }
 }

@@ -3,6 +3,7 @@ import Banner from '@components/Banner'
 import Keywords from '@components/Common/Keywords'
 import { KeywordsProps } from '@components/Common/Keywords/Keywords.types'
 import ProjectCarousel from '@components/ProjectCarousel'
+import VideoPlayer from '@components/VideoPlayer'
 import { PageDataProps } from 'src/types/page'
 
 const TextPage = (props: PageDataProps) => {
@@ -18,6 +19,8 @@ const TextPage = (props: PageDataProps) => {
                 return <ProjectCarousel key={pageItem.id} {...pageItem} />
             case 'articleContainer':
                 return <ArticleContainer key={pageItem.id} {...pageItem} />
+            case 'videoPlayer':
+                return <VideoPlayer key={pageItem.id} {...pageItem} />
             default:
                 return <></>
         }

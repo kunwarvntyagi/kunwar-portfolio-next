@@ -8,5 +8,5 @@ export const projectCardStyles = {
         'font-Bold text-xl lg:text-3xl text-center mb-40 uppercase max-w-3/4',
     subHeading:
         'font-Regular text-md lg:text-lg text-center lg:max-w-9/10 min-h-140',
-    image: 'lg:max-h-[350px] max-w-[350px] lg:max-w-full max-h-[300px] object-contain',
+    image: 'lg:max-h-[350px] lg:min-h-[350px] min-h-[300px] max-w-[350px] lg:max-w-full max-h-[300px] object-contain',
 }
