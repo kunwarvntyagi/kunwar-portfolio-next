@@ -1,4 +1,4 @@
-import { getParentPageMappedData } from '@adapters/contentful/contentful.helper'
+import { getArticlePageMappedData } from '@adapters/contentful/contentful.helper'
 import { GetServerSideProps } from 'next'
 import React from 'react'
 import TextPage from 'src/containers/TextPage'
@@ -7,8 +7,7 @@ import ErrorPage from '../404'
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     let pageData = null
 
-    const { allPageData } = await getParentPageMappedData(
-        'article',
+    const { allPageData } = await getArticlePageMappedData(
         params?.slug,
     )
 
