@@ -6,6 +6,7 @@ import { collapseSection } from '@helpers/accordionAnimation'
 import { loader } from '@helpers/image.helper'
 import Image from 'next/image'
 import classNames from 'classnames'
+import LinkButton from '@components/Common/LinkButton'
 
 const MenuSlotAccordionItem = (props: MenuSlotAccordionItemProps) => {
     const { isSelected, setIndex, index, menuSlot, plusImage, minusImage } =
@@ -55,13 +56,13 @@ const MenuSlotAccordionItem = (props: MenuSlotAccordionItemProps) => {
                 {' '}
                 {menuSlot?.menuItem?.map((item, index: number) => {
                     return (
-                        <a
+                        <LinkButton
                             key={index}
                             className={styles.menuSlotButton}
-                            href={item?.fields?.link?.fields?.url}
+                            url={item?.fields?.link?.fields?.url}
                         >
                             {item?.fields?.title}
-                        </a>
+                        </LinkButton>
                     )
                 })}
             </div>

@@ -16,6 +16,7 @@ const Footer = (props: FooterProps) => {
                     <a
                         href={footerData?.footerLogo?.link}
                         className={styles.logo}
+                        rel="noopener noreferrer"
                     >
                         <Image
                             src={footerData?.footerLogo?.image?.url}

@@ -1,6 +1,7 @@
 import { KeywordsProps } from './Keywords.types'
 import Typography from '@components/Typography'
 import { keywordsStyles } from './Keywords.styles'
+import LinkButton from '../LinkButton'
 
 const Keywords = (props: KeywordsProps) => {
     const { heading, keywords } = props
@@ -28,14 +29,14 @@ const Keywords = (props: KeywordsProps) => {
                 {keywords.map(
                     (keyword: { title: string; url: string }, idx: number) => {
                         return keyword.url ? (
-                            <a
-                                className={keywordsStyles.keywordLink}
-                                href={keyword.url}
+                            <LinkButton
                                 key={idx}
                                 target="__blank"
+                                className={keywordsStyles.keywordLink}
+                                {...keyword}
                             >
                                 {keyword.title}
-                            </a>
+                            </LinkButton>
                         ) : (
                             <div className={keywordsStyles.keyword} key={idx}>
                                 {keyword.title}

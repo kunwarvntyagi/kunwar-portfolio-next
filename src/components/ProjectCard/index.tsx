@@ -3,6 +3,7 @@ import { ProjectCardProps } from '@components/ProjectCarousel/ProjectCarousel.ty
 import Picture from '@components/Common/Picture'
 import classnames from 'classnames'
 import Typography from '@components/Typography'
+import LinkButton from '@components/Common/LinkButton'
 
 const ProjectCard = ({ image, heading, callToAction }: ProjectCardProps) => {
     return (
@@ -34,13 +35,12 @@ const ProjectCard = ({ image, heading, callToAction }: ProjectCardProps) => {
                     />
                 )}
                 {callToAction.link && (
-                    <a
-                        target={callToAction.target}
-                        href={callToAction.link.url}
+                    <LinkButton
+                        {...callToAction}
                         className={projectCardStyles.button}
                     >
                         {callToAction.linkText}
-                    </a>
+                    </LinkButton>
                 )}
             </div>
         </div>

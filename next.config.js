@@ -17,7 +17,6 @@ const nextConfig = {
   poweredByHeader: false,
   swcMinify: true,
   compress: true,
-  output: 'export',
   trailingSlash: true,
   // images: {
   //   disableStaticImages: true,

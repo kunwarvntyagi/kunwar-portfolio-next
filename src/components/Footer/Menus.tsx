@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './styles/Footer-tw-styles'
 import { FooterMenu, FooterProps } from './types/Footer.types'
 import classNames from 'classnames'
+import LinkButton from '@components/Common/LinkButton'
 
 const Menus = ({ footerData, isMobile }: FooterProps) => {
     const { footerMenuCollection } = footerData
@@ -16,14 +17,14 @@ const Menus = ({ footerData, isMobile }: FooterProps) => {
                                     key={index}
                                     className={styles.footerDesktop.menuList}
                                 >
-                                    <a
-                                        href={footerMenu?.link?.url}
+                                    <LinkButton
+                                        {...footerMenu}
                                         className={
                                             styles.footerDesktop.menuLink
                                         }
                                     >
                                         {footerMenu?.title}
-                                    </a>
+                                    </LinkButton>
                                 </li>
                             )
                         },

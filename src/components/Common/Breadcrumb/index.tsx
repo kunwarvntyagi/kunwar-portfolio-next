@@ -1,5 +1,6 @@
 import { BreadcrumbDataProps, BreadcrumbProps } from './Breadcrumb.types'
 import { breadcrumbStyles } from './Breadcrumb.styles'
+import LinkButton from '../LinkButton'
 
 const Breadcrumb = (props: BreadcrumbDataProps) => {
     const { breadcrumbs } = props
@@ -11,13 +12,13 @@ const Breadcrumb = (props: BreadcrumbDataProps) => {
                         {bread.title}
                     </p>
                 ) : (
-                    <a
+                    <LinkButton
                         key={index}
                         className={breadcrumbStyles.breadcrumblink}
-                        href={bread.url}
+                        {...bread}
                     >
                         {bread.title}
-                    </a>
+                    </LinkButton>
                 )
             })}
         </div>
