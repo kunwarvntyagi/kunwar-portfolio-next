@@ -105,7 +105,11 @@ const generateSSGWebConfig = () => {
 			</configuration>
     `
 
-    fs.writeFileSync('out/web.config', webConfig)
+    try {
+    fs.writeFileSync('out/web.config', webConfig)}
+    catch (e) {
+
+    }
 }
 
 export default generateSSGWebConfig
