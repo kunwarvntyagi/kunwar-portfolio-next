@@ -7,9 +7,7 @@ import ErrorPage from '../404'
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     let pageData = null
 
-    const { allPageData } = await getArticlePageMappedData(
-        params?.slug,
-    )
+    const { allPageData } = await getArticlePageMappedData(params?.slug)
 
     if (allPageData.items.length) {
         pageData = allPageData.items[0]

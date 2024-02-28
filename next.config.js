@@ -13,7 +13,7 @@ const withImages = require('next-images')
 module.exports = withImages({})
 
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   poweredByHeader: false,
   swcMinify: true,
   compress: true,
@@ -25,7 +25,7 @@ const nextConfig = {
   //   domains: ['images.ctfassets.net']
   // }, 
   images: {
-    unoptimized: true, // due to SSG, next/image needs SSR for image/optimization
+    unoptimized: true, // true due to SSG, next/image needs SSR for image/optimization
     remotePatterns: [
       {
         protocol: 'https',
