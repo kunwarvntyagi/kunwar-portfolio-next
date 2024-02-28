@@ -3,6 +3,7 @@ import { memo } from 'react'
 import MenuSlotAccordionItem from './MenuSlotAccordionItem'
 import Accordion from '@components/Accordion/Accordion'
 import { MINUS_IMAGE, PLUS_IMAGE } from 'src/constants'
+import LinkButton from '@components/Common/LinkButton'
 
 const MenuSlotsMobile = (props) => {
     const { menuSlots } = props
@@ -30,13 +31,13 @@ const MenuSlotsMobile = (props) => {
                             }}
                         </Accordion>
                     ) : (
-                        <a
-                            href={menuSlot?.link?.url}
+                        <LinkButton
+                            url={menuSlot?.link?.url}
                             key={index}
                             className={styles.menuSlotButton}
                         >
                             {menuSlot?.title}
-                        </a>
+                        </LinkButton>
                     )
                 })}
             </div>

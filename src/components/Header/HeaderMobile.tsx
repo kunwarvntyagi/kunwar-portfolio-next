@@ -5,6 +5,7 @@ import Media from '../Media'
 import { HABURGER_IMAGE, HABURGER_IMAGE_OPEN } from '../../constants'
 import Navigation from './Navigation'
 import Image from 'next/image'
+import LinkButton from '@components/Common/LinkButton'
 
 const HeaderMobile = ({ data }) => {
     const { headerLogo, headerMenuCollection } = data
@@ -33,8 +34,8 @@ const HeaderMobile = ({ data }) => {
                         className={classNames(styles.headerContainer)}
                     >
                         <div className={styles.brandLogoWrapper}>
-                            <a
-                                href={headerLogo?.link}
+                            <LinkButton
+                                url={headerLogo?.link}
                                 className="flex justify-center items-center gap-[20px]"
                             >
                                 <Media
@@ -43,7 +44,7 @@ const HeaderMobile = ({ data }) => {
                                     className={styles.logoImage}
                                 />
                                 <p className={styles.logoName}>{'Kunwar'}</p>
-                            </a>
+                            </LinkButton>
                         </div>
                         <div className={styles.iconWrapper}>
                             <div className={styles.hamburgerWrapper}>

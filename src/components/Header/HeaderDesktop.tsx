@@ -2,6 +2,7 @@ import classnames from 'classnames'
 import { useState } from 'react'
 import Media from '../Media'
 import styles from './styles/HeaderDesktop-tw-styles'
+import LinkButton from '@components/Common/LinkButton'
 
 const HeaderDesktop = ({ data }) => {
     const { headerLogo, headerMenuCollection } = data
@@ -25,8 +26,8 @@ const HeaderDesktop = ({ data }) => {
             <nav id="navbar" className={styles.navBar}>
                 <div className={classnames(styles.navBarWrapper)}>
                     <div className={styles.headerLogo}>
-                        <a
-                            href={headerLogo?.link}
+                        <LinkButton
+                            url={headerLogo?.link}
                             className="flex justify-center items-center gap-[20px]"
                         >
                             <Media
@@ -35,7 +36,7 @@ const HeaderDesktop = ({ data }) => {
                                 className={styles.logoImage}
                             />
                             <p className={styles.logoName}>{'Kunwar'}</p>
-                        </a>
+                        </LinkButton>
                     </div>
                     <div className={styles.menuWrapperDesktop}>
                         <ul className="flex">
@@ -93,14 +94,14 @@ const HeaderDesktop = ({ data }) => {
                                                                                 ind,
                                                                             ) => {
                                                                                 return (
-                                                                                    <a
+                                                                                    <LinkButton
                                                                                         key={
                                                                                             ind
                                                                                         }
                                                                                         className={
                                                                                             styles.menuListItem
                                                                                         }
-                                                                                        href={
+                                                                                        url={
                                                                                             menuListItem
                                                                                                 ?.fields
                                                                                                 ?.link
@@ -122,7 +123,7 @@ const HeaderDesktop = ({ data }) => {
                                                                                                     ?.title
                                                                                             }
                                                                                         </li>
-                                                                                    </a>
+                                                                                    </LinkButton>
                                                                                 )
                                                                             },
                                                                         )}
@@ -133,16 +134,16 @@ const HeaderDesktop = ({ data }) => {
                                                     </div>
                                                 </div>
                                             ) : (
-                                                <a
+                                                <LinkButton
                                                     className={
                                                         styles.menuItemHover
                                                     }
-                                                    href={
+                                                    url={
                                                         mainMenuItem?.link?.url
                                                     }
                                                 >
                                                     {mainMenuItem?.title}
-                                                </a>
+                                                </LinkButton>
                                             )}
                                         </li>
                                     )

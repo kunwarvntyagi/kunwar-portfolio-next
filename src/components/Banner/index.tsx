@@ -5,6 +5,7 @@ import { bannerStyles } from './Banner.styles'
 import Typography from '@components/Typography'
 import MouseAnimation from '@components/Common/MouseAnimation'
 import Picture from '@components/Common/Picture'
+import LinkButton from '@components/Common/LinkButton'
 
 const Banner = (props: PageItemsProps) => {
     const {
@@ -42,13 +43,12 @@ const Banner = (props: PageItemsProps) => {
                     />
                 )}
                 {callToAction.link && (
-                    <a
-                        target={callToAction.target}
-                        href={callToAction.link.url}
+                    <LinkButton
                         className={bannerStyles.button}
+                        {...callToAction}
                     >
                         {callToAction.linkText}
-                    </a>
+                    </LinkButton>
                 )}
             </div>
             <div className={bannerStyles[bannerType].imageContainer}>

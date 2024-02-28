@@ -27,7 +27,7 @@ const TextPage = (props: PageDataProps) => {
     }
     return (
         <>
-            {pageContentCollection.items.map((pageItem: KeywordsProps) => {
+            {pageContentCollection?.items?.map((pageItem: KeywordsProps) => {
                 return loadComponent(pageItem.__typename__, pageItem)
             })}
         </>

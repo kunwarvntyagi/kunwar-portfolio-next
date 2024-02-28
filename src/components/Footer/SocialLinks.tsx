@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './styles/Footer-tw-styles'
 import { FooterProps, FooterSocial } from './types/Footer.types'
 import Image from 'next/image'
+import LinkButton from '@components/Common/LinkButton'
 
 const SocialLinks = ({ footerData, isMobile }: FooterProps) => {
     const { footerSocialCollection } = footerData
@@ -12,9 +13,9 @@ const SocialLinks = ({ footerData, isMobile }: FooterProps) => {
                 (socialMenu: FooterSocial, index: number) => {
                     return (
                         <li key={index}>
-                            <a
-                                href={socialMenu?.link}
-                                target={socialMenu?.target}
+                            <LinkButton
+                                url={socialMenu?.link}
+                                target={socialMenu.target}
                                 className={socialStyle.socialIconLink}
                             >
                                 <Image
@@ -24,7 +25,7 @@ const SocialLinks = ({ footerData, isMobile }: FooterProps) => {
                                     width={socialMenu?.image?.width}
                                     height={socialMenu?.image?.height}
                                 />
-                            </a>
+                            </LinkButton>
                         </li>
                     )
                 },
